@@ -19,6 +19,7 @@ class TodoList extends AutoDisposeAsyncNotifier<List<Todo>> {
 
   Future<void> addTodo(Todo todo) async {
     //Faz um post que retorna um novo objeto que entao é adicionado ao estado atual
+    //parece que esse é o jeito certi de fazer mas depende do que voce quer
     //var newTodo = await service.addTodo(todo);
     //var newData = [...state.value, newTodo];
     //state = AsyncData(newData);

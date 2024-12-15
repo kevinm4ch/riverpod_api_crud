@@ -1,16 +1,37 @@
 # riverpod_api_crud
 
-A new Flutter project.
+Projeto de CRUD usando riverpod para genrenciar o estado de uma lista de tarefas
 
-## Getting Started
+## Para começar
 
-This project is a starting point for a Flutter application.
+Para testar o projeto é necessário instalar o pacote [json_rest_server](https://pub.dev/packages/json_rest_server) que vai nos permitir utitlizar uma API a partir de um arquivo json.
 
-A few resources to get you started if this is your first Flutter project:
+### Instalando o json_rest_server
+- Abra o terminal na pasta do projeto e digite o comando
+```
+dart pub global activate json_rest_server
+```
+- No linux é necessário adicionar o executável ao PATH
+```
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Criando a pasta do backend
+- Crie o ambiente do backend usando o json_rest_server
+```
+jrs create backend
+cd backend
+```
+### Alterando o database.json
+- Dentro da pasta backend, abra o arquivo database.json, apague todo o seu conteúdo e cole o conteúdo abaixo
+```
+{
+    "todo": []
+}
+```
+### Iniciando o servidor
+- Para iniciar o servidor, no terminal, digite os comando abaixo
+```
+cd backend
+jrs run
+```
